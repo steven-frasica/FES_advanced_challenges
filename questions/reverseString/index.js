@@ -14,7 +14,13 @@
 // a = 'ivaD', c = 'd' => a = 'd' + 'ivaD' = 'divaD'
 
 const reverseString = (str) => {
-
+  const strArray = str.split("");
+  const newArray = []
+  for (let i = strArray.length - 1; i >= 0; i--) {
+    newArray.push(strArray[i])
+    console.log(newArray)
+  }
+  return newArray.join("")
 };
 
 module.exports = reverseString;
