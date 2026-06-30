@@ -23,16 +23,73 @@
 //   return newArray.join("")
 // };
 
-  const reverseString= (str) => {
-    const strArray = str.split("");
-    const reverseArray = [];
-    const reverseString = "";
-    for (let i = 0; i <= strArray.length - 1; i++) {
-      reverseArray.unshift(strArray[i])
-    }
-    const revStr = reverseArray.join("")
-    return revStr;
-  }
+  // const reverseString= (str) => {
+  //   const strArray = str.split("");
+  //   const reverseArray = [];
+  //   const reverseString = "";
+  //   for (let i = 0; i <= strArray.length - 1; i++) {
+  //     reverseArray.unshift(strArray[i])
+  //   }
+  //   const revStr = reverseArray.join("")
+  //   return revStr;
+  // }
+
+  // solution video 
+
+//  1.
+
+// const reverseString = (str) => {
+//   let reversed = '';
+//   for (let i = 0; i < str.length; i++) {
+//     reversed = str[i] + reversed;
+//   }
+//   return reversed;
+// }
+
+// const reverseString = (str) => {
+//   const strArray = str.split('')
+//   let revStrArray = [];
+//   for (char of strArray) {
+//     revStrArray.unshift(char)
+//   }
+//   // turn array into string
+//   return revStrArray.join('');
+// }
+
+// without turning into array
+
+// const reverseString = (str) => {
+//   let revStr = '';
+//   for (let letter of str) {
+//     revStr = letter + revStr;
+//   }
+//   return revStr;
+// }
+
+// const reverseString = (str) => {
+//   const strArray = str.split('');
+//   let revArray = strArray.reverse();
+//   return revArray.join('')
+// }
+
+// const reverseString = (str) => {
+//   const strArray = str.split('');
+//   const revStr = strArray.reduce((accumulator, current) => {
+//     console.log(accumulator);
+//     return current + accumulator;
+//   })
+
+//   return revStr;
+// } 
+
+// refactored
+
+const reverseString = (str) => {
+  return str 
+    .split("")
+    .reduce((accumulator, current) => current + accumulator);
+};
+
 
 module.exports = reverseString;
 
